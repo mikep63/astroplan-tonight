@@ -58,5 +58,5 @@ export function computeTonight(targets, latDeg, lonDeg, now = new Date()) {
   // `.meridian` sort — transit time ascending.
   ranked.sort((a, b) => a.transitDate - b.transitDate);
 
-  return { window, moon, sunset, sunrise, targets: ranked };
+  return { window, moon, sunset, sunrise, observer, targets: ranked };
 }

@@ -18,6 +18,14 @@ browser.
   with no web equivalent, and out of scope here by design.
 - **Location** — browser Geolocation API, same UX role as CoreLocation in
   the app (permission prompt, no server round-trip).
+- **Per-target detail view** — tapping a row opens a hash-routed
+  (`#/<object-name>`) detail page mirroring the app's ObjectDetailView:
+  an info table (type, constellation, mag, size, RA/Dec, designations) and a
+  "Tonight" section with an inline SVG altitude-vs-time curve, current
+  altitude, peak, transit, and Moon separation. Limited to fields already in
+  `targets.json`; morphology, surface brightness, catalog memberships, best
+  month, and DSS2 hero images would each need the export pipeline (and image
+  sourcing) extended before they can appear.
 
 ## Decisions
 
@@ -50,7 +58,10 @@ js/
   sunmoon.js                astronomy-engine wrapper: sun/moon/twilight
   data.js                   fetch targets.json; displayName/typeLabel/secondary-name
   rank.js                   fixed-default ranking pipeline
-  render.js                 DOM rendering
+  detail.js                 per-target detail compute (altitude curve, peak,
+                            transit, moon separation) — mirrors the app's
+                            ObjectDetailView "Tonight" section
+  render.js                 DOM rendering (list + hash-routed detail view)
 vendor/astronomy.js         vendored astronomy-engine 2.1.19 (MIT, 0 deps)
 data/targets.json           generated — see below, not hand-edited
 ```

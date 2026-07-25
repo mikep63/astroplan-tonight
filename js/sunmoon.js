@@ -72,6 +72,14 @@ function phaseNameAndEmoji(elongationDeg) {
   return { name: "New Moon", emoji: "🌑" };
 }
 
+/** Moon's apparent equatorial coords at `date`, in degrees (ra 0..360, dec).
+ * astronomy-engine returns ra in sidereal hours; ×15 gives degrees, matching
+ * the RA/Dec convention altaz.js and targets.json use. */
+export function moonEquatorial(date, observer) {
+  const eq = Astronomy.Equator(Body.Moon, date, observer, true, true);
+  return { ra: eq.ra * 15, dec: eq.dec };
+}
+
 export function moonInfo(date, observer) {
   // 0..360°, elongation between lunar/solar ecliptic longitude — same
   // convention as Swift's `moonLon - sunLon` (0 = new, 180 = full).

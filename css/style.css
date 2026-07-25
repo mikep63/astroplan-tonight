@@ -72,13 +72,25 @@ a {
 }
 
 .target-row {
+  display: block;
   padding: 8px 0;
   border-top: 1px solid rgba(120, 120, 128, 0.16);
+  color: inherit;
+  text-decoration: none;
 }
 
 .target-row:first-of-type {
   border-top: none;
   padding-top: 0;
+}
+
+.target-row:hover {
+  background: rgba(120, 120, 128, 0.1);
+}
+
+.target-row .chevron {
+  flex: 0 0 auto;
+  font-size: 1.1em;
 }
 
 .target-row .header {
@@ -104,6 +116,58 @@ a {
 .target-row .transit {
   flex: 0 0 auto;
   font-variant-numeric: tabular-nums;
+}
+
+.back-link {
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.detail-header {
+  margin-top: 8px;
+}
+
+.detail-header h1 {
+  font-size: 1.4em;
+  margin: 0 0 2px;
+}
+
+.detail-header .secondary {
+  color: #8e8e93;
+  font-weight: 400;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 4px 0;
+  border-top: 1px solid rgba(120, 120, 128, 0.16);
+  font-variant-numeric: tabular-nums;
+}
+
+.info-row:first-of-type {
+  border-top: none;
+}
+
+.info-label {
+  color: #8e8e93;
+}
+
+.info-value {
+  text-align: right;
+}
+
+.alt-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 12px;
+}
+
+.chart-legend {
+  margin: 6px 0 0;
 }
 
 .page-footer {
