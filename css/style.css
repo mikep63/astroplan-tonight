@@ -1,0 +1,129 @@
+/* Palette/type matches astroplan-docs' existing pages (see index.html) for
+   a consistent AstroPlan web presence, extended with the app's system-blue
+   accent and grouped-list card styling for a denser, data-driven layout. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  max-width: 640px;
+  margin: 32px auto;
+  padding: 0 20px 40px;
+  line-height: 1.45;
+  color: #1c1c1e;
+}
+
+a {
+  color: #007aff;
+}
+
+.page-header h1 {
+  font-size: 1.6em;
+  margin-bottom: 2px;
+}
+
+.muted {
+  color: #8e8e93;
+}
+
+.small {
+  font-size: 0.85em;
+}
+
+.centered {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.error {
+  color: #ff3b30;
+}
+
+.card {
+  background: rgba(120, 120, 128, 0.08);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 16px;
+}
+
+.card h2 {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #8e8e93;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.row-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.filter-summary {
+  margin-top: 14px;
+  font-size: 0.85em;
+  color: #8e8e93;
+}
+
+.target-row {
+  padding: 8px 0;
+  border-top: 1px solid rgba(120, 120, 128, 0.16);
+}
+
+.target-row:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.target-row .header {
+  font-size: 1em;
+}
+
+.target-row .secondary {
+  color: #8e8e93;
+}
+
+.target-row .caption {
+  font-size: 0.85em;
+  color: #8e8e93;
+  margin-top: 2px;
+}
+
+.target-row .truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.target-row .transit {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.page-footer {
+  margin-top: 3em;
+  font-size: 0.85em;
+  color: #8e8e93;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #f2f2f7;
+  }
+  a {
+    color: #0a84ff;
+  }
+  .card {
+    background: rgba(120, 120, 128, 0.16);
+  }
+  .target-row {
+    border-top-color: rgba(120, 120, 128, 0.24);
+  }
+}
