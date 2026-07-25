@@ -210,7 +210,6 @@ export function renderDetail(root, obj, detail, state) {
     infoRow("RA (J2000)", formatRA(obj.raDegrees)),
     infoRow("Dec (J2000)", formatDec(obj.decDegrees)),
     infoRow("Designations", escapeHtml(designations(obj).join(" · "))),
-    infoRow("Popularity", "🔥 Popular target"),
   ].join("");
 
   const namesCard = obj.commonNames
