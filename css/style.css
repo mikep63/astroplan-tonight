@@ -123,6 +123,41 @@ a {
   font-size: 0.9em;
 }
 
+/* Tracked-targets reference list (targets.html) */
+.filter-box {
+  width: 100%;
+  margin-top: 12px;
+  padding: 9px 12px;
+  font-size: 1em;
+  color: inherit;
+  border: 1px solid rgba(120, 120, 128, 0.3);
+  border-radius: 8px;
+  background: rgba(120, 120, 128, 0.06);
+}
+
+.catalog-row {
+  padding: 8px 0;
+  border-top: 1px solid rgba(120, 120, 128, 0.16);
+}
+
+.catalog-row:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.catalog-row .header {
+  font-size: 1em;
+}
+
+.catalog-row .secondary {
+  color: #8e8e93;
+}
+
+.catalog-row .caption,
+.catalog-row .designations {
+  margin-top: 2px;
+}
+
 .detail-header {
   margin-top: 8px;
 }
@@ -188,6 +223,13 @@ a {
     background: rgba(120, 120, 128, 0.16);
   }
   .target-row {
+    border-top-color: rgba(120, 120, 128, 0.24);
+  }
+  .filter-box {
+    border-color: rgba(120, 120, 128, 0.4);
+    background: rgba(120, 120, 128, 0.16);
+  }
+  .catalog-row {
     border-top-color: rgba(120, 120, 128, 0.24);
   }
 }
