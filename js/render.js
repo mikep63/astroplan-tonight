@@ -67,7 +67,7 @@ function renderTargetRow(row) {
   return `
     <div class="target-row">
       <div class="row-line">
-        <span class="header">🔥 <strong>${escapeHtml(obj.displayName)}</strong> ${secondary}</span>
+        <span class="header"><strong>${escapeHtml(obj.displayName)}</strong> ${secondary}</span>
       </div>
       <div class="row-line caption">
         <span class="truncate">${escapeHtml(captionParts(obj))}</span>
