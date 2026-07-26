@@ -50,6 +50,8 @@ browser.
 
 ```
 index.html                 entry point
+targets.html                static reference list of every tracked target
+about.html                  attributions, calculations, privacy — static, no JS
 css/style.css               matches astroplan-docs' palette/type
 js/
   main.js                   orchestration: geolocation -> data -> rank -> render
@@ -78,6 +80,11 @@ Re-run it (`python3 Tools/export_tonight_data.py` from the AstroPlan repo)
 whenever `popularity.json`, the catalog CSVs, or `CatalogLists.swift`'s
 cross-reference tables change, then commit the regenerated `data/targets.json`
 here.
+
+`targets.json` is a derivative of OpenNGC (CC BY-SA 4.0), so the site has to
+carry attribution, the license link, and an indication of modifications —
+that's what `about.html` is for. If the export ever starts pulling fields
+from other catalogs, add them there too.
 
 One real finding from building this: `Sh2-171` used to be a
 `popularity.json` key that silently never applied to anything, because its

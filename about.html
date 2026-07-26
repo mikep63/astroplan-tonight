@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstroTonight · About</title>
+  <meta name="description" content="Data sources, attributions, and privacy for AstroTonight — the web companion to the AstroTonight iOS app." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <p><a class="back-link" href="index.html">← Tonight</a></p>
+    <h1>About</h1>
+    <p class="muted small">Where the data comes from, how the numbers are computed, and what happens to your location.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Data Sources</h2>
+
+      <div class="source">
+        <p class="source-title">OpenNGC</p>
+        <p class="muted small">
+          Deep-sky object catalog by Mattia Verga, licensed under CC BY-SA 4.0. Ninety-five of
+          the 96 targets on this site — their positions, magnitudes, apparent sizes, object types,
+          and constellations — come from the OpenNGC NGC/IC catalog and its addendum, as bundled
+          by the AstroTonight iOS app with added cross-references (Caldwell numbers, common names)
+          and a small number of corrections. Full details and source files are published under the
+          same license.
+        </p>
+        <p class="small"><a href="https://github.com/mattiaverga/OpenNGC">github.com/mattiaverga/OpenNGC</a></p>
+        <p class="small"><a href="https://mikep63.github.io/astroplan-docs/catalog-data.html">Catalog data &amp; modifications (CC BY-SA 4.0)</a></p>
+        <p class="small"><a href="https://creativecommons.org/licenses/by-sa/4.0/">creativecommons.org/licenses/by-sa/4.0</a></p>
+        <p class="muted small">
+          The target list this site loads (<code>data/targets.json</code>) is a derivative of
+          OpenNGC and is likewise available under CC BY-SA 4.0.
+        </p>
+      </div>
+
+      <div class="source">
+        <p class="source-title">Sharpless Catalog</p>
+        <p class="muted small">
+          The Sh2- designations shown on 33 of these targets come from the Catalogue of HII
+          Regions: Sharpless, S. 1959, ApJS 4, 257. Obtained via the VizieR catalogue access tool,
+          CDS, Strasbourg, France (catalog VII/20).
+        </p>
+        <p class="small"><a href="https://cdsarc.cds.unistra.fr/viz-bin/cat/VII/20">cdsarc.cds.unistra.fr/viz-bin/cat/VII/20</a></p>
+      </div>
+
+      <div class="source">
+        <p class="source-title">Lynds' Catalogue of Dark Nebulae</p>
+        <p class="muted small">
+          LDN 1235 (the Shark Nebula) is drawn from Lynds, B. T. 1962, ApJS 7, 1. Obtained via the
+          VizieR catalogue access tool, CDS, Strasbourg, France (catalog VII/7).
+        </p>
+        <p class="small"><a href="https://cdsarc.cds.unistra.fr/viz-bin/cat/VII/7">cdsarc.cds.unistra.fr/viz-bin/cat/VII/7</a></p>
+      </div>
+
+      <div class="source">
+        <p class="source-title">Observing Lists</p>
+        <p class="muted small">
+          The C designations shown on 29 of these targets follow the Caldwell catalogue, compiled
+          by Sir Patrick Moore.
+        </p>
+      </div>
+
+      <div class="source">
+        <p class="source-title">astronomy-engine</p>
+        <p class="muted small">
+          Sun and Moon positions, twilight times, and rise/set searches use astronomy-engine
+          v2.1.19 by Don Cross — MIT licensed, copyright © 2019–2023 Don Cross.
+        </p>
+        <p class="small"><a href="https://github.com/cosinekitty/astronomy">github.com/cosinekitty/astronomy</a></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Popular Targets</h2>
+      <p class="muted small">
+        The 96 objects listed here are an editorial pick — objects the developer considers
+        frequently imaged favorites, not derived from any external ranking or dataset. They mirror
+        the 🔥 popular targets in the AstroTonight iOS app.
+        <a href="targets.html">Browse the full list →</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Calculations</h2>
+      <p class="muted small">
+        Everything is computed in your browser, nothing is fetched from a server. Object
+        positions, transit times, and altitude curves use standard positional-astronomy algorithms
+        (after Jean Meeus, <em>Astronomical Algorithms</em>), ported from the iOS app. Sun, Moon,
+        and twilight times come from astronomy-engine's ephemeris rather than the app's own
+        routine, so a given time may differ from the app's by a few seconds.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Privacy</h2>
+      <p class="muted small">
+        Your browser asks for your location, and it is used only within your browser, to work out
+        what is above your horizon tonight. It is never transmitted, stored remotely, or shared.
+        This site has no server component, no accounts, and no analytics.
+      </p>
+      <p class="small"><a href="https://mikep63.github.io/astroplan-docs/">Privacy Policy</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Support</h2>
+      <p class="muted small">
+        This site is a companion to the AstroTonight iOS app. Questions, corrections, and bug
+        reports are welcome on GitHub.
+      </p>
+      <p class="small"><a href="https://github.com/mikep63/AstroPlan">github.com/mikep63/AstroPlan</a></p>
+      <p class="muted small">© 2026 Mike Parker</p>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p class="muted small">
+      A companion to the <a href="https://github.com/mikep63/AstroPlan">AstroTonight</a> iOS app.
+    </p>
+  </footer>
+</body>
+</html>

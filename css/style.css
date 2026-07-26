@@ -205,6 +205,46 @@ a {
   margin: 6px 0 0;
 }
 
+/* Attribution/about page (about.html) — grouped blocks inside a .card,
+   divided like the list rows elsewhere. */
+.source {
+  padding: 10px 0;
+  border-top: 1px solid rgba(120, 120, 128, 0.16);
+}
+
+.source:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.source:last-of-type {
+  padding-bottom: 0;
+}
+
+.source p {
+  margin: 0 0 4px;
+}
+
+.source p:last-child {
+  margin-bottom: 0;
+}
+
+.source-title {
+  font-weight: 600;
+}
+
+.card > p {
+  margin: 0 0 6px;
+}
+
+.card > p:last-child {
+  margin-bottom: 0;
+}
+
+.card code {
+  font-size: 0.95em;
+}
+
 .page-footer {
   margin-top: 3em;
   font-size: 0.85em;
@@ -230,6 +270,9 @@ a {
     background: rgba(120, 120, 128, 0.16);
   }
   .catalog-row {
+    border-top-color: rgba(120, 120, 128, 0.24);
+  }
+  .source {
     border-top-color: rgba(120, 120, 128, 0.24);
   }
 }
